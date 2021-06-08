@@ -5,6 +5,18 @@ import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class MemberServiceImpl implements MemberService {
+
+    // シングルトン
+    private static MemberServiceImpl singleton = new MemberServiceImpl();
+
+    //コンストラクタをprivateで宣言することで新しいインスタンスを外部で宣言できなくする
+    private MemberServiceImpl() {};
+
+    public static MemberServiceImpl getInstance(){
+        return singleton;
+    }
+
+
     @Override
     public String greet(int i) {
         String[] greetings = {"GoodMorning","hello","good evening"};
