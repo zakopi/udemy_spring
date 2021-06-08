@@ -8,4 +8,6 @@ public interface MemberService {
 
     ArrayList<Member> getAll();
 
+    int sumOf(int x,int y);
+
 }

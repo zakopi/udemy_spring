@@ -2,6 +2,7 @@ package service;
 
 import entity.Member;
 import java.util.ArrayList;
+import java.util.stream.IntStream;
 
 public class MemberServiceImpl implements MemberService {
     @Override
@@ -19,5 +20,11 @@ public class MemberServiceImpl implements MemberService {
         list.add(mem1);
         list.add(mem2);
         return list;
+    }
+
+    // ここはserviceに実装した関数から自動生成してつくる
+    @Override
+    public int sumOf(int x, int y) {
+        return IntStream.rangeClosed(x,y).sum();
     }
 }

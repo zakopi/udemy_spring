@@ -15,5 +15,11 @@ public class Main {
         for(Member mem : list){
             System.out.println(mem.getId() + "," + mem.getName() + "," + mem.getEmail());
         }
+
+        //streamを用いた関数の呼び出し
+        System.out.println(service.sumOf(3,5));
+
+
+
     }
 }
